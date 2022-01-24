@@ -21,4 +21,4 @@ def uid_html(uid):
     return render_template("uid.html", uid=uid, branches=branches)
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=1)
+    app.run(debug=1)
