@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, url_for, request, redirect
 app = Flask(__name__)
 
@@ -20,5 +21,8 @@ def verify():
 def uid_html(uid):
     return render_template("uid.html", uid=uid, branches=branches)
 
+
+port = int(os.environ.get("PORT", 5000))
+
 if __name__ == "__main__":
-    app.run(debug=1)
+    app.run(host="0.0.0.0", port=port, debug=1)
