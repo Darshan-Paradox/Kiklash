@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap')
+;
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	
+	font-size: 24px;
+}
+
+.kiklash {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	font-family: 'Major Mono Display', monospace;
+	font-size: 4.2rem;
+}
+
+.id_in {
+	display: flex;
+	align-items: baseline;
+
+	font-size: 1.8rem;
+	font-family: 'Lato', sans-serif;
+}
+
+.id {
+	margin-top: 20px;
+	width: 280px;
+	height: 40px;
+
+	outline: 0;
+	border: solid 0px black;
+	border-bottom: solid 2px black;
+
+	font-size: 1.8rem;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+	text-transform: uppercase;
+}
+
+.info {
+	margin-top: 30px;
+
+	font-size: 1rem;
+	font-family: 'Lato', sans-serif;
+
+	animation: textPulse linear 0.3s infinite alternate;
+}
+
+@keyframes textPulse {
+	0% {color: white;}
+	100% {color: black;}
+}

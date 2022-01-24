@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href=" {{ url_for("static", filename="css/uid.css") }} ">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+
+		<div class="sidebar">
+			<span> 🗓 <b><u>{{ uid }}</u></b> </span>
+
+			<div class="DEls">
+				<i class="bi bi-caret-right-fill"></i> <i class="bi bi-caret-down-fill"></i> DEls
+			</div>
+			
+			<div class="HuEls">
+				<i class="bi bi-caret-right-fill"></i> <i class="bi bi-caret-down-fill"></i> HuEls
+			</div>
+
+			<div class="search">
+				<span>Search 🔍</span>
+				<span>
+					📚
+					<input list="branches" class="branches" autocomplete="off" maxlength="5" value="Course Name">
+					<datalist id="branches">
+						{% for branch in branches %}
+							<option value="{{ branch }}">
+						{% endfor %}
+					</datalist>
+				</span>
+			</div>
+		</div>
+
+
+		<div class="TT">
+			<span><i class="bi bi-printer"></i><i class="bi bi-printer-fill"></i></span>
+		</div>
+
+
+		<script src=" {{ url_for("static", filename="js/render_TT.js") }} "></script>
+		<script src=" {{ url_for("static", filename="js/dropdown.js") }} "></script>
+	</body>
+</html>
+

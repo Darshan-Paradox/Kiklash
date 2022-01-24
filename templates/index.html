@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet"
+			  href="{{ url_for("static",
+			  filename="css/index.css") }}">
+		<title></title>
+	</head>
+	<body>
+		<script src="{{ url_for("static",
+			filename="js/index.js") }}">
+		</script>
+		<div class="kiklash">
+			KiKlAsh
+			<span class="id_in">
+				ID No:  &nbsp;
+				<input type="text" class="id" maxlength="13"/>
+			</span>
+			<span class="info">
+				Press enter to continue
+			</span>
+		</div>
+	</body>
+</html>
+
