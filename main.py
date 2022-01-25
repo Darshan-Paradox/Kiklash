@@ -1,4 +1,4 @@
-import secrets
+import secrets, time
 from flask import Flask, render_template, url_for, request, redirect, session
 import uid as uid_lib
 
@@ -17,8 +17,9 @@ def verify():
     if request.method == "POST":
         uid = request.get_data(as_text=1).upper()
         if uid_lib.validate(uid):
-            session["uid"] = uid
+            session["uid"] = f"{uid}"
             session.modified = True
+            time.sleep(1)
             return redirect(f"/{uid}", code=302)
         else:
             return "error"
