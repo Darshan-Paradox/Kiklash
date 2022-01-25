@@ -16,7 +16,7 @@ def verify():
         if uid_lib.validate(uid):
             return redirect(f"/{uid}", code=302)
         else:
-            return redirect("/")
+            return "error"
 
 
 @app.route("/<uid>")
