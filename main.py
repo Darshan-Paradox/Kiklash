@@ -14,7 +14,6 @@ def verify():
     if request.method == "POST":
         uid = request.get_data(as_text=1).upper()
         if uid_lib.validate(uid):
-            session["uid"] = uid
             return redirect(f"/{uid}", code=302)
         else:
             return "error"
@@ -22,7 +21,4 @@ def verify():
 
 @app.route("/<uid>")
 def uid_html(uid):
-    if session["uid"]:
-        return render_template("uid.html", uid=uid, branches=branches)
-    else:
-        redirect("/")
+    return render_template("uid.html", uid=uid, branches=branches)
