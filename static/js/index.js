@@ -17,7 +17,7 @@ async function submit(e)
 		if (res.redirected)
 			window.location = res.url
 		else
-			document.querySelector(".id")style.background = `rgba(255, 0, 0, 0.1)`
+			document.querySelector(".id").style.background = `rgba(255, 0, 0, 0.1)`
 	}
 }
 
