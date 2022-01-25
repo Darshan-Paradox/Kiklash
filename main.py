@@ -25,4 +25,7 @@ def verify():
 
 @app.route("/<uid>")
 def uid_html(uid):
-    return render_template("uid.html", uid=uid, branches=branches)
+    if "uid" in session:
+        return render_template("uid.html", uid=uid, branches=branches)
+    else:
+        return "Error"
