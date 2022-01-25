@@ -19,8 +19,8 @@ async function submit(e)
 		else
 		{
 			let id_box = document.querySelector(".id")
-			id_box.style.background = `rgba(255, 0, 0, 0.8)`
-			id_box.borderColor = `rgba(255,0,0,0)`
+			id_box.style.background = `rgba(255, 0, 0, 0.1)`
+			id_box.borderBottomColor = `rgba(255, 0, 0, 0)`
 		}
 	}
 }
