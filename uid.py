@@ -22,7 +22,7 @@ def get_campus(uid):
         return 0
 
 def validate(uid):
-    if get_year(uid) <= 5 or get_year(uid) > 0:
+    if get_year(uid) <= 5 and get_year(uid) > 0:
         if get_branch(uid)[0] in branches and get_branch(uid)[1] in branches:
             if get_campus(uid):
                 return 1
