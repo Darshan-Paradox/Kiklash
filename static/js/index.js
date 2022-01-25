@@ -13,6 +13,7 @@ async function submit(e)
 						body: uid
 					})
 
+		console.log(res)
 		if (res.redirected)
 			window.location = res.url
 		else
