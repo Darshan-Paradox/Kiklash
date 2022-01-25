@@ -18,6 +18,7 @@ def verify():
         uid = request.get_data(as_text=1).upper()
         if uid_lib.validate(uid):
             session["uid"] = uid
+            session.modified = True
             return redirect(f"/{uid}", code=302)
         else:
             return "error"
