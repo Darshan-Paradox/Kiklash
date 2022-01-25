@@ -1,6 +1,9 @@
+import secrets
 from flask import Flask, render_template, url_for, request, redirect, session
 import uid as uid_lib
+
 app = Flask(__name__)
+app.secret_key = secrets.token_hex()
 
 branches = ["BIO", "CS", "CHEM", "CHE", "PHY"]
 
@@ -14,6 +17,7 @@ def verify():
     if request.method == "POST":
         uid = request.get_data(as_text=1).upper()
         if uid_lib.validate(uid):
+            session["uid"] = uid
             return redirect(f"/{uid}", code=302)
         else:
             return "error"
